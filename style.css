@@ -1,0 +1,67 @@
+/* Universal Reset */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f4f8;
+      font-family: 'Poppins', sans-serif;
+}
+
+.floating-label {
+      position: relative;
+      width: 300px;
+      margin-top: 20px;
+}
+
+.floating-label input {
+      width: 100%;
+      padding: 15px 10px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background: #ffffff;
+      font-size: 1rem;
+      outline: none;
+      color: #333;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.floating-label input::placeholder {
+      color: transparent;
+}
+
+.floating-label input:focus {
+      border: 2px solid #ff6f61;
+      background: #fff8f7;
+}
+
+.floating-label label {
+      position: absolute;
+      left: 12px;
+      top: 45%;
+      transform: translateY(-45%);
+      color: #aaa;
+      font-size: 1rem;
+      pointer-events: none;
+      background-color: #ffffff;
+      padding: 0 5px;
+      border-radius: 34px;
+      transition: all 0.3s ease;
+}
+
+.floating-label input:focus+label,
+.floating-label input:not(:placeholder-shown)+label {
+      top: 0px;
+      left: 10px;
+      font-size: 0.85rem;
+      color: #ff6f61;
+      background: #f0f4f8;
+
+}
